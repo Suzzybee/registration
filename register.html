@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register page</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <main class="d-flex justify-content-between">
+        <form action="">
+            <h3>Sign Up</h3>
+            <div class="form-group" class="mt-5 mb-5">
+                <label for="">Username</label>
+                <input type="text" name="" id="Username" class="form-control ">
+            </div>
+            <div class="form-group" class="mt-5 mb-5">
+                <label for="">Email</label>
+                <input type="text" name="" id="email" class="form-control ">
+            </div>
+            <div class="form-group" class="mt-5 mb-5">
+                <label for="">Password</label>
+                <input type="password" name="" id="Password" class="form-control ">
+            </div>
+            <div>
+                <button onclick="register()" type="button">Register</button>
+                <button onclick="exist()" type="button" id="existBtn">Already have an Account?</button>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+
+</html>
+<script>
+    let Username = document.getElementById('Username')
+    let email = document.getElementById('email')
+    let password = document.getElementById('Password')
+    let allUser = JSON.parse(localStorage.getItem('allUser')) || []
+    function register() {
+        let data = {
+            Username: Username.value,
+            email: email.value,
+            password: password.value
+        }
+
+        allUser.push(data)
+        localStorage.setItem('allUser', JSON.stringify(allUser))
+        window.location.href = 'login.html'
+    }
+    function exist(){
+        window.location.href = 'login.html'    
+    }
+
+</script>

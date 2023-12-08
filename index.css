@@ -1,0 +1,80 @@
+body{
+    background-image: url('./images/background-img3.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    /* border: 1px solid; */
+    width: 30%;
+    margin: 1em auto;
+    padding: 2em;
+    box-shadow: 1px 0 5em 2px;
+    border-radius: 1em;
+}
+
+div{
+    margin: 2em;
+}
+input{
+    background-color: transparent;
+    width: 100%;
+    padding: .5em;
+}
+input:hover{
+    background-color: bisque;
+}
+button{
+    background-color: rgb(70, 63, 63);
+    margin-top: 1em;
+    padding: 10px;
+    width: 100%;
+    border-radius: 1em;
+    border: 0;
+    color: white;
+}
+#existBtn{
+    background-color: rgb(153, 15, 15);
+    margin-top: 1em;
+    padding: 10px;
+    width: 100%;
+    border-radius: 1em;
+    border: 0;
+    color: rgb(255, 255, 255);    
+}
+#backToLogin{
+    background-color: rgb(153, 15, 15);
+    /* margin-top: 1em; */
+    padding: 10px;
+    width: 100%;
+    border-radius: 1em;
+    border: 0;
+    color: rgb(255, 255, 255);    
+   
+}
+#facebook{
+    margin-top: 1em;
+    /* padding: 10px; */
+    width: 100%;
+    border-radius: 1em;
+    border: 0;
+    color: rgb(255, 255, 255);    
+    background-color: rgb(76, 76, 216);
+}
+#google{
+    margin-top: 1em;
+    /* padding: 10px; */
+    width: 100%;
+    border-radius: 1em;
+    border: 0;
+    color: rgb(19, 18, 18);    
+    background-color: rgb(235, 235, 243);
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+h3{
+    /* padding-left: 8em; */
+    text-align: center;
+}

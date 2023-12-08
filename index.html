@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard page</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main class="d-flex justify-content-between">
+        <h1>Welcome to your dashboard! <span id="username"></span></h1>
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+
+</html>
+
+<script>
+    let username = document.getElementById('username')
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'))
+    if (loggedInUser) {
+        username.innerHTML =String(loggedInUser.Username).toUpperCase() 
+    }else{
+        alert('you are not authorised to this page \n please sign in')
+        window.location.href = 'login.html'
+    }
+
+    function logout() {
+        localStorage.removeItem('loggedInUser');
+        window.location.href = 'login.html'
+    }
+</script>
